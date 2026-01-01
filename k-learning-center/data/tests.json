@@ -1,0 +1,85 @@
+{
+  "tests": [
+    {
+      "id": "learning-style-diagnosis",
+      "title": "학습성향 진단",
+      "emoji": "📚",
+      "shortDesc": "나에게 딱 맞는 공부법을 찾아보세요",
+      "description": "시각형, 청각형, 읽기/쓰기형, 운동감각형 중 나의 학습 성향을 정확히 진단하고, 성향에 맞는 최적의 학습 전략을 제안합니다. 자신의 강점을 활용한 효과적인 공부법을 발견해보세요.",
+      "category": "learning-style",
+      "tags": ["BEST", "인기"],
+      "targetAudience": ["초등", "중등", "고등"],
+      "questionCount": 32,
+      "timeMinutes": 15,
+      "participants": 45823,
+      "createdAt": "2024-01-15",
+      "isNew": false,
+      "isActive": true,
+      "relatedTests": ["motivation-type", "concentration-check"],
+      "premium": {
+        "available": true,
+        "price": 9900,
+        "features": [
+          "상세 성향 분석 리포트",
+          "과목별 맞춤 학습법",
+          "학부모용 가이드",
+          "PDF 다운로드"
+        ]
+      }
+    },
+    {
+      "id": "teacher-compatibility",
+      "title": "선생님 궁합 검사",
+      "emoji": "👩‍🏫",
+      "shortDesc": "선생님과의 학습 궁합을 알아보세요",
+      "description": "선생님의 수업 스타일과 나의 학습 스타일이 얼마나 잘 맞는지 진단합니다. 궁합 결과를 통해 수업 참여도를 높이고 선생님과 더 효과적으로 소통하는 방법을 알려드립니다.",
+      "category": "relationship",
+      "tags": ["NEW", "추천"],
+      "targetAudience": ["중등", "고등"],
+      "questionCount": 24,
+      "timeMinutes": 10,
+      "participants": 12456,
+      "createdAt": "2024-11-20",
+      "isNew": true,
+      "isActive": true,
+      "relatedTests": ["learning-style-diagnosis", "communication-style"],
+      "premium": {
+        "available": true,
+        "price": 7900,
+        "features": [
+          "궁합 상세 분석",
+          "소통 전략 가이드",
+          "수업 참여 팁"
+        ]
+      }
+    },
+    {
+      "id": "motivation-type",
+      "title": "학습동기 유형검사",
+      "emoji": "🔥",
+      "shortDesc": "무엇이 나를 공부하게 만드는지 알아보세요",
+      "description": "내재적 동기와 외재적 동기, 성취 목표 지향성 등 학습 동기의 유형과 수준을 종합적으로 분석합니다. 동기 유형에 따른 맞춤형 동기부여 전략을 제공합니다.",
+      "category": "motivation",
+      "tags": ["BEST", "인기"],
+      "targetAudience": ["초등", "중등", "고등"],
+      "questionCount": 20,
+      "timeMinutes": 8,
+      "participants": 38291,
+      "createdAt": "2024-03-10",
+      "isNew": false,
+      "isActive": true,
+      "relatedTests": ["learning-style-diagnosis", "goal-setting-ability"],
+      "premium": {
+        "available": true,
+        "price": 8900,
+        "features": [
+          "동기 유형 심층 분석",
+          "동기부여 전략 가이드",
+          "목표 설정 워크시트",
+          "학부모 코칭 가이드"
+        ]
+      }
+    }
+  ],
+  "lastUpdated": "2024-12-01"
+}
