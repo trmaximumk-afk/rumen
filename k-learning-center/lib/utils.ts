@@ -1,16 +1,17 @@
-import { CategoryScore, Answer, Test } from '@/types';
+import { CategoryScore, Answer, TestDetail, Category } from '@/types';
 
 /**
  * 검사 결과 점수를 계산합니다.
  */
 export function calculateScores(
-  test: Test,
+  test: TestDetail,
+  categories: Category[],
   answers: Answer[]
 ): CategoryScore[] {
   const categoryScores: Record<string, { score: number; maxScore: number }> = {};
 
   // 카테고리별 초기화
-  test.categories.forEach((category) => {
+  categories.forEach((category) => {
     categoryScores[category.id] = { score: 0, maxScore: 0 };
   });
 
@@ -26,13 +27,13 @@ export function calculateScores(
   });
 
   // 결과 배열 생성
-  return test.categories.map((category) => ({
+  return categories.map((category) => ({
     categoryId: category.id,
     categoryName: category.name,
-    score: categoryScores[category.id].score,
-    maxScore: categoryScores[category.id].maxScore,
+    score: categoryScores[category.id]?.score || 0,
+    maxScore: categoryScores[category.id]?.maxScore || 0,
     percentage:
-      categoryScores[category.id].maxScore > 0
+      categoryScores[category.id]?.maxScore > 0
         ? Math.round(
             (categoryScores[category.id].score /
               categoryScores[category.id].maxScore) *
@@ -47,6 +48,16 @@ export function calculateScores(
  */
 export function cn(...classes: (string | boolean | undefined)[]): string {
   return classes.filter(Boolean).join(' ');
+}
+
+/**
+ * 숫자를 한국어 형식으로 포맷합니다.
+ */
+export function formatNumber(num: number): string {
+  if (num >= 10000) {
+    return `${(num / 10000).toFixed(1)}만`;
+  }
+  return num.toLocaleString();
 }
 
 /**
