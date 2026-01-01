@@ -1,4 +1,7 @@
-// 검사 관련 타입 정의
+// 검사 메타데이터 타입 (목록, 카테고리)
+export * from './test';
+
+// 검사 문항 및 결과 관련 타입
 
 export interface Question {
   id: string;
@@ -13,18 +16,11 @@ export interface Option {
   score: number;
 }
 
-export interface Test {
+export interface TestDetail {
   id: string;
   title: string;
   description: string;
   questions: Question[];
-  categories: Category[];
-}
-
-export interface Category {
-  id: string;
-  name: string;
-  description: string;
 }
 
 export interface TestResult {

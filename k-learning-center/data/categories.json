@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "id": "learning-style",
+      "name": "학습성향",
+      "emoji": "📚",
+      "description": "나만의 학습 스타일과 성향을 진단합니다",
+      "order": 1
+    },
+    {
+      "id": "motivation",
+      "name": "학습동기",
+      "emoji": "🔥",
+      "description": "학습 동기와 목표 설정 능력을 분석합니다",
+      "order": 2
+    },
+    {
+      "id": "relationship",
+      "name": "관계/소통",
+      "emoji": "🤝",
+      "description": "선생님, 친구와의 학습 관계를 진단합니다",
+      "order": 3
+    },
+    {
+      "id": "concentration",
+      "name": "집중력",
+      "emoji": "🎯",
+      "description": "집중력과 학습 환경 적합도를 분석합니다",
+      "order": 4
+    },
+    {
+      "id": "career",
+      "name": "진로/적성",
+      "emoji": "🧭",
+      "description": "진로 방향과 적성을 탐색합니다",
+      "order": 5
+    },
+    {
+      "id": "emotion",
+      "name": "정서/심리",
+      "emoji": "💚",
+      "description": "학습 관련 정서와 스트레스를 진단합니다",
+      "order": 6
+    }
+  ]
+}
