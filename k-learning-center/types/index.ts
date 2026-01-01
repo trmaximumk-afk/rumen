@@ -74,3 +74,40 @@ export const DEFAULT_LIKERT_SCALE: LikertScale[] = [
   { value: 4, label: '그렇다', shortLabel: '그렇다' },
   { value: 5, label: '매우 그렇다', shortLabel: '매우' },
 ];
+
+// 검사 결과 표시용 타입
+export interface ScoreBar {
+  label: string;
+  score: number;
+  maxScore: number;
+  color?: string;
+}
+
+export interface ResultData {
+  // 기본 정보
+  typeName: string;
+  typeCode?: string;
+  emoji: string;
+  summary: string;
+  description: string;
+
+  // 점수
+  scores: ScoreBar[];
+
+  // 상세 내용
+  strengths: string[];
+  tips: string[];
+  cautions?: string[];
+
+  // 프리미엄
+  premium?: {
+    available: boolean;
+    price: number;
+    features: string[];
+  };
+
+  // 메타
+  testId: string;
+  testTitle: string;
+  completedAt: string;
+}
