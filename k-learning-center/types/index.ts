@@ -50,3 +50,27 @@ export interface User {
   role: 'student' | 'parent';
   testResults: TestResult[];
 }
+
+// 리커트 척도 문항 타입
+export interface LikertQuestion {
+  id: number;
+  text: string;
+  category?: string;
+  reversed?: boolean; // 역채점 여부
+}
+
+// 리커트 척도 레이블
+export interface LikertScale {
+  value: number;
+  label: string;
+  shortLabel?: string;
+}
+
+// 기본 5점 리커트 척도
+export const DEFAULT_LIKERT_SCALE: LikertScale[] = [
+  { value: 1, label: '전혀 아니다', shortLabel: '전혀' },
+  { value: 2, label: '아니다', shortLabel: '아니다' },
+  { value: 3, label: '보통이다', shortLabel: '보통' },
+  { value: 4, label: '그렇다', shortLabel: '그렇다' },
+  { value: 5, label: '매우 그렇다', shortLabel: '매우' },
+];
